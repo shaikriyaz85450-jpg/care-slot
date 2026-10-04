@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏥 CareSlot
 
-## Getting Started
+### Hospital Doctor Availability & Appointment Management System
 
-First, run the development server:
+CareSlot is a role-based hospital appointment management system designed to reduce unnecessary patient waiting and hospital visits by allowing patients to check doctor availability, view appointment slots, book appointments, and receive notifications when a doctor's availability changes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚨 Problem
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Patients often travel to hospitals without knowing whether their doctor is:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Available
+- Delayed
+- On leave
+- Currently accepting appointments
 
-## Learn More
+This can result in:
 
-To learn more about Next.js, take a look at the following resources:
+- Unnecessary hospital visits
+- Long waiting times
+- Missed appointments
+- Patient frustration
+- Hospital crowding
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💡 Solution
 
-## Deploy on Vercel
+CareSlot provides a centralized platform where patients can:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Find doctors by department
+- View doctor profiles
+- Check live doctor availability
+- View available appointment slots
+- Book appointments
+- Cancel or reschedule appointments
+- Receive notifications when a doctor's availability changes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The system also provides dedicated portals for doctors and hospital administrators.
+
+---
+
+## 👥 User Roles
+
+CareSlot follows a role-based architecture with three main users.
+
+### 👤 Patient
+
+Patients can:
+
+- Register/login
+- Search for doctors
+- Filter doctors
+- View doctor profiles
+- Check doctor availability
+- View available appointment slots
+- Book appointments
+- Cancel appointments
+- Reschedule appointments
+- View appointment history
+- Receive notifications
+
+### 👨‍⚕️ Doctor
+
+Doctors can:
+
+- Login to their doctor portal
+- View today's appointments
+- Manage weekly schedules
+- Set consultation duration
+- Update live availability
+  - Available
+  - Delayed
+  - On Leave
+- Mark appointments as completed
+- Manage their profile
+
+### 👨‍💼 Admin
+
+Administrators can:
+
+- View system overview
+- Manage doctors
+- Add/edit doctors
+- Activate/deactivate doctors
+- Manage departments
+- View hospital appointments
+- Search and filter appointments
+- Cancel appointments when required
+
+---
+
+## ⭐ Key Features
+
+### 🔐 Role-Based Authentication
+
+Different users receive different permissions and dashboards.
+
+```text
+Patient → Patient Portal
+Doctor  → Doctor Portal
+Admin   → Admin Portal
